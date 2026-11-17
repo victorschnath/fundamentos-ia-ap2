@@ -58,14 +58,12 @@ def salvar_palavras_influentes(modelo: Pipeline, destino: Path) -> None:
     indices_negativos = np.argsort(coeficientes, kind="stable")[:10]
     positivas = pd.DataFrame(
         {
-            "classe": "positivo",
             "palavra": palavras[indices_positivos],
             "coeficiente": coeficientes[indices_positivos],
         }
     )
     negativas = pd.DataFrame(
         {
-            "classe": "negativo",
             "palavra": palavras[indices_negativos],
             "coeficiente": coeficientes[indices_negativos],
         }
