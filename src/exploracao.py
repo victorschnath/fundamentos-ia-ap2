@@ -23,7 +23,7 @@ def salvar_exploracao(avaliacoes: pd.DataFrame, destino: Path) -> None:
         )
 
         for avaliacao in grupo.head(3).itertuples(index=False):
-            linhas.append(f"- ID {avaliacao.id}: {avaliacao.texto}")
+            linhas.append(f"- {avaliacao.texto}")
 
     destino.parent.mkdir(parents=True, exist_ok=True)
     destino.write_text("\n".join(linhas) + "\n", encoding="utf-8")

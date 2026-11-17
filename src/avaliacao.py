@@ -9,7 +9,6 @@ from sklearn.pipeline import Pipeline
 def avaliar_no_teste(
     modelo: Pipeline,
     teste: pd.DataFrame,
-    configuracao: str,
     pasta_resultados: Path,
 ) -> dict[str, float]:
     reais = teste["sentimento"]
@@ -42,17 +41,7 @@ def avaliar_no_teste(
         digits=4,
         zero_division=0,
     )
-    relatorio = (
-        f"Configuração escolhida: {configuracao}\n"
-        f"Avaliações no teste: {len(teste)}\n"
-        f"Acurácia no teste: {acuracia:.6f}\n"
-        f"F1 da classe positiva no teste: {f1:.6f}\n"
-        f"Erros no teste: {len(erros)}\n\n"
-        f"{classificacao}\n"
-        "Na matriz de confusão, as linhas são as classes reais e as colunas são as previstas.\n"
-        "Em erros.csv, probabilidade é a probabilidade estimada para a classe prevista.\n"
-    )
-    (pasta_resultados / "relatorio_classificacao.txt").write_text(relatorio, encoding="utf-8")
+    (pasta_resultados / "relatorio_classificacao.txt").write_text(classificacao, encoding="utf-8")
     return {"acuracia": acuracia, "f1": f1}
 
 

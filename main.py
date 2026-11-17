@@ -31,7 +31,7 @@ def main() -> None:
     modelo_final = criar_pipeline(escolhida)
     modelo_final.fit(treino["texto"], treino["sentimento"])
 
-    metricas = avaliar_no_teste(modelo_final, teste, escolhida, pasta_resultados)
+    metricas = avaliar_no_teste(modelo_final, teste, pasta_resultados)
     salvar_palavras_influentes(modelo_final, pasta_resultados / "palavras_influentes.csv")
 
     casos_dificeis = pd.read_csv(pasta_projeto / "data" / "casos_dificeis.csv", encoding="utf-8")
