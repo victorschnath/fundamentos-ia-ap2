@@ -15,15 +15,15 @@ python -m venv .venv
 
 ## Desenvolvimento
 
-A preparação inicial inclui os dados, o ambiente virtual e o modelo do relatório. A implementação deve seguir as etapas do enunciado.
+A etapa de exploração dos dados está implementada. Ela gera `resultados/exploracao.txt` com o total de avaliações, a distribuição das classes, o tamanho médio dos textos em palavras e três exemplos de cada classe.
 
-Após implementar `main.py`, a execução no Windows será:
+Para executar no Windows:
 
 ```powershell
 .\.venv\Scripts\python.exe main.py
 ```
 
-Com o ambiente virtual ativo, o comando equivalente é `python main.py`. Ele deverá gerar os arquivos de `resultados/`.
+Com o ambiente virtual ativo, o comando equivalente é `python main.py`. O arquivo de exploração é gerado novamente a cada execução.
 
 Os módulos ficam em `src/`, e as respostas devem ser preenchidas em `RELATORIO.md`.
 

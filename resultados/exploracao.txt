@@ -1,0 +1,20 @@
+Exploração das avaliações
+Total de avaliações: 260
+
+Classe: negativo
+Quantidade: 130
+Percentual: 50.0%
+Tamanho médio dos textos: 7.71 palavras
+Três primeiros exemplos da classe:
+- ID 1: Detestei o fone, ruim, nunca mais compro
+- ID 3: A embalagem não é excelente
+- ID 4: Cheguei animado, mas me arrependi, tudo estava sujo
+
+Classe: positivo
+Quantidade: 130
+Percentual: 50.0%
+Tamanho médio dos textos: 7.70 palavras
+Três primeiros exemplos da classe:
+- ID 2: Adorei o aplicativo, show
+- ID 5: Adorei o atendimento, nota máxima para a equipe
+- ID 11: Ficou lindo na sala, combinou perfeitamente com os móveis
